@@ -10,7 +10,8 @@ consumer.subscriptions.create("ChatChannel", {
   },
 
   received(data) {
-    console.log(data.content)
+    const message = document.querySelector('.message')
+    message.append(data.content)
     // Called when there's incoming data on the websocket for this channel
   },
 
