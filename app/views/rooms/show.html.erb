@@ -1,0 +1,14 @@
+<h1>Chat room </h1>
+
+<div id="messages">
+  <%= render "rooms/message" %>
+</div>
+
+<div>
+  <%= form_for @message, :url => "/rooms", :html => {:method => :post} do |f| %>
+    <%=f.text_field :content %>
+    <%= f.submit "submit" %>
+  <% end %>
+</div>
+
+
